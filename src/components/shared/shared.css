@@ -1,0 +1,90 @@
+.date-search {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  max-width: 350px;
+  flex-direction: row-reverse;
+}
+
+.date-search > div {
+  border: 1px solid #cccccc;
+}
+
+.date-search > .icon {
+  width: 70px;
+  display: flex;
+  cursor: pointer;
+  height: inherit;
+  border-left: unset;
+  background: #f2f2f2;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.date-search img {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+.date-search > .input {
+  width: 100%;
+  display: flex;
+  height: inherit;
+
+  padding: 0px 20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.date-search > .input .calender-icon {
+  margin: auto 0;
+  width: fit-content;
+  height: fit-content;
+}
+
+.date-search > .input input {
+  width: 100%;
+  border: none;
+  margin: auto 0;
+  font-size: 16px;
+  color: #2f313f;
+  font-weight: 500;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+.date-search > .input input:focus {
+  border: none;
+  outline: none;
+}
+
+.default-content {
+  height: 90%;
+  position: relative;
+  border-top: 1px solid #cecece;
+}
+
+.default-content .default-content-img {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+}
+
+.default-content .default-content-img img {
+  height: 150px;
+  width: 150px;
+}
+
+@media screen and (max-width: 480px) {
+  .default-content .default-content-img img {
+    height: 100px;
+    width: 100px;
+  }
+}

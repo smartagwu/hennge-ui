@@ -1,3 +1,93 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App .top-search {
+  padding: 50px 100px 20px 100px;
+}
+
+.App .mail {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 100px;
+}
+
+.App .mail .result-count {
+  height: auto;
+  font-size: 16px;
+  font-weight: 500;
+  color: #303240c9;
+  margin-bottom: 10px;
+}
+
+.App .mail .result-count span {
+  margin-right: 2px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.App .mail .mail-content {
+  height: 100%;
+}
+.border-red {
+  border: 1px solid red;
+}
+
+p {
+  margin: 0px;
+}
+
+p,
+input,
+div {
+  color: #2f313f;
+}
+
+.col-1 {
+  width: 8.333%;
+}
+.col-2 {
+  width: 16.666%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.333%;
+}
+.col-5 {
+  width: 41.666%;
+}
+.col-6 {
+  width: 50%;
+}
+
+.inline-display {
+  display: inline-flex;
+}
+
+@media screen and (max-width: 768px) {
+  .App .top-search {
+    padding: 20px;
+  }
+
+  .App .mail {
+    padding: 0px;
+  }
+  .App .mail .result-count {
+    padding: 0px 20px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  .App .mail {
+    padding: 0px 20px;
+  }
+
+  .App .top-search {
+    padding: 50px 20px 20px 20px;
+  }
 }
