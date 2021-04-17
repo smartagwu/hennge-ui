@@ -39,6 +39,7 @@ export interface MailInterface {
   subject: string;
   hasAttachment: boolean;
   date: string;
+  body: string;
 }
 
 var mails: MailInterface[] = [
@@ -48,7 +49,9 @@ var mails: MailInterface[] = [
     count: 1,
     subject: "[ HR-888 ] Notice of official announcement",
     hasAttachment: true,
-    date: "0:20"
+    date: "0:20",
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     from: "bbb.bbbb@example.com",
@@ -56,7 +59,9 @@ var mails: MailInterface[] = [
     count: 0,
     subject: '"[web:333] "Web Contact"',
     hasAttachment: false,
-    date: "0:10"
+    date: "0:10",
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     from: "ccc@example.com",
@@ -64,7 +69,9 @@ var mails: MailInterface[] = [
     count: 1,
     subject: "Happy New Year! Greetings for the New Year.",
     hasAttachment: true,
-    date: "0:00"
+    date: "0:00",
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     from: "ddd.dddd@example.com",
@@ -72,7 +79,9 @@ var mails: MailInterface[] = [
     count: 1,
     subject: "[HR-887(Revised: Office Expansion Project Team)] Notice of office expansion",
     hasAttachment: false,
-    date: "Jan 01"
+    date: "Jan 01",
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     from: "eee@example.com",
@@ -80,7 +89,9 @@ var mails: MailInterface[] = [
     count: 2,
     subject: "[Github] Logout page",
     hasAttachment: false,
-    date: "Jan 01"
+    date: "Jan 01",
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     from: "fff.ffff@example.com",
@@ -88,7 +99,9 @@ var mails: MailInterface[] = [
     count: 0,
     subject: "dev］ Postfix 3.1.12 / 3.2.9 / 3.3.4 / 3.4.5",
     hasAttachment: false,
-    date: "Jan 01"
+    date: "Jan 01",
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     from: "ggg@example.com",
@@ -96,7 +109,9 @@ var mails: MailInterface[] = [
     count: 0,
     subject: "Re: [Github] Brush-up on loading animation ",
     hasAttachment: false,
-    date: "Jan 01"
+    date: "Jan 01",
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     from: "hhh.hhh@@example.com",
@@ -104,7 +119,9 @@ var mails: MailInterface[] = [
     count: 0,
     subject: "Workplace Summary for sample, Inc.: Jun 2 - Jun 9",
     hasAttachment: true,
-    date: "Jan 01"
+    date: "Jan 01",
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     from: "iii@example.com",
@@ -112,7 +129,9 @@ var mails: MailInterface[] = [
     count: 0,
     subject: "I love you",
     hasAttachment: true,
-    date: "2019/12/31"
+    date: "2019/12/31",
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   {
     from: "Pablo-Diego@example.com",
@@ -120,6 +139,8 @@ var mails: MailInterface[] = [
     count: 0,
     subject: "[info:888] ABC EQUIPMENT COMPANY",
     hasAttachment: false,
-    date: "2019/12/31"
+    date: "2019/12/31",
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   }
 ];

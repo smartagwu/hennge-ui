@@ -8,17 +8,14 @@ import arrow_icon from "../../assets/images/icon_arrow02.svg";
 
 var isMobile: boolean = window.innerWidth <= 768;
 
-export default function MailList(props: { mails: MailInterface[] }) {
+export default function MailList(props: { mails: MailInterface[]; updateOpenMails: any }) {
   return (
     <div className="mail-list">
       <div className="table-list">
         <ListHeader />
-        {isMobile ? (
-          <MobileList mails={props.mails}></MobileList>
-        ) : (
-          <TableList mails={props.mails}></TableList>
-        )}
+        {isMobile ? <MobileList {...props}></MobileList> : <TableList {...props}></TableList>}
       </div>
+      <p>Designed with ❤️ by Smart Agwu :)</p>
     </div>
   );
 }
@@ -44,10 +41,14 @@ function ListHeader() {
   );
 }
 
-function TableList(props: { mails: MailInterface[] }) {
-  const { mails } = props;
+function TableList(props: { mails: MailInterface[]; updateOpenMails: any }) {
+  const { mails, updateOpenMails } = props;
   var mailItems = mails.map((mail, index) => (
-    <li className="body-list" id={`mail_${index}`}>
+    <li
+      className="body-list"
+      id={`mail_${index}`}
+      key={`mail_${index}`}
+      onClick={() => updateOpenMails(index)}>
       <ul>
         <li className="col-2">
           <p>{mail.from}</p>
@@ -82,17 +83,21 @@ function TableList(props: { mails: MailInterface[] }) {
   return <ul className="table-body">{mailItems}</ul>;
 }
 
-function MobileList(props: { mails: MailInterface[] }) {
-  const { mails } = props;
+function MobileList(props: { mails: MailInterface[]; updateOpenMails: any }) {
+  const { mails, updateOpenMails } = props;
   var mailItems = mails.map((mail, index) => (
-    <li className="body-list" id={`mail_${index}`}>
+    <li
+      className="body-list"
+      id={`mail_${index}`}
+      key={`mail_${index}`}
+      onClick={() => updateOpenMails(index)}>
       <div className="mail-details">
         <img src={mail_icon} alt="mail icon" />
         <div className="details">
           <div className="from">
             <img id="arrow_icon_id" src={arrow_icon} alt="arrow icon" />
             <p className="date">{mail.date}</p>
-            <img src={clip_icon} alt="attachment icon" />
+            {mail.hasAttachment && <img src={clip_icon} alt="attachment icon" />}
             <p className="from-text">{mail.from}</p>
           </div>
           <div className="to">

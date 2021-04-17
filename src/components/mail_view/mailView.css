@@ -1,0 +1,154 @@
+.mail-view {
+  right: 0px;
+  height: 100%;
+  width: 500px;
+  display: flex;
+  background: #ffffff;
+  flex-direction: column;
+  border: 1px solid #cccccc;
+  border-top-right-radius: 10px;
+  transition: 0.3s all ease-in-out;
+}
+
+.mail-view.show-view {
+  transform: translateX(6px);
+}
+
+.mail-view.hide-view {
+  transform: translateX(1000px);
+}
+
+.mail-view .top-close-icon {
+  cursor: pointer;
+  margin-right: 10px;
+  width: fit-content;
+  margin: 10px 20px 8px auto;
+}
+
+.mail-view .top-close-icon img {
+  width: 13px;
+  height: 13px;
+}
+
+.mail-view .view-container {
+  height: 100%;
+}
+
+.mail-view .view-container .view-header {
+  margin: 0px;
+  height: 50px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  background: #f2f2f2;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+.mail-view .view-container .view-header > li {
+  width: 146px;
+  display: flex;
+  cursor: pointer;
+  height: inherit;
+  padding: 0px 10px;
+  flex-direction: row-reverse;
+  transition: 0.3s all ease-in-out;
+  border-right: 1px solid #cccccc;
+}
+
+.mail-view .view-container .view-header > li.active {
+  height: 51px;
+  background: #ffffff;
+}
+
+.mail-view .view-container .view-header > li img {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  margin: auto 0 auto 10px;
+}
+
+.mail-view .view-container .view-header > li p {
+  width: 100%;
+  margin: auto 0;
+  font-size: 12px;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.mail-view .view-container .view-body {
+  padding: 20px;
+}
+
+.mail-view .view-container .view-body .top {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+.mail-view .view-container .view-body .top .subject {
+  font-size: 16px;
+  font-weight: 400;
+}
+.mail-view .view-container .view-body .top .top-details {
+  display: flex;
+  margin: auto 0;
+  margin-top: 7px;
+  flex-direction: row-reverse;
+}
+.mail-view .view-container .view-body .top .top-details p {
+  font-size: 12px;
+  font-weight: 400;
+}
+.mail-view .view-container .view-body .top .top-details .date {
+  display: flex;
+}
+.mail-view .view-container .view-body .top .top-details .date p {
+  margin-left: 10px;
+  white-space: nowrap;
+}
+.mail-view .view-container .view-body .top .top-details p {
+  margin: 0px;
+}
+.mail-view .view-container .view-body .top .top-details img {
+  width: 15px;
+  height: 15px;
+}
+.mail-view .view-container .view-body .top .top-details .email-address {
+  width: 100%;
+  margin: auto 0;
+}
+.mail-view .view-container .view-body .top .top-details .email-address .from {
+  font-weight: 700;
+}
+
+.mail-view .view-container .view-body .body-text {
+  padding: 10px 0px;
+}
+.mail-view .view-container .view-body .body-text p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .mail-view {
+    width: 100%;
+    border-top-right-radius: 0px;
+  }
+
+  .mail-view .view-container .view-header {
+    display: none;
+  }
+
+  .mail-view .view-container .view-body {
+    padding: 0px 20px;
+  }
+
+  .mail-view.show-view {
+    transform: translateX(0px);
+  }
+
+  .mail-view .top-close-icon {
+    margin: 10px 20px 8px auto;
+  }
+}
